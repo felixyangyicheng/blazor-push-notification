@@ -18,7 +18,7 @@ WORKDIR "/src/ServiceMonitor/Server"
 RUN dotnet build "./ServiceMonitor.Server.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
-ARG BUILD_CONFIGURATION=Debug
+ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "./ServiceMonitor.Server.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
