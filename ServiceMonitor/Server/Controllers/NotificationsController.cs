@@ -34,6 +34,8 @@ namespace ServiceMonitor.Server.Controllers
                 .OrderByDescending(n => n.NotificationSubscriptionId);
 
             var notificationHelper = new NotificationHelper();
+
+
             foreach (var subscription in subscriptions)
             {
                 try

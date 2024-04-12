@@ -14,7 +14,7 @@ self.addEventListener('push', event => {
     event.waitUntil(
         self.registration.showNotification('Service Monitor', {
             body: payload.message,
-            icon: 'icon-512.png',
+            icon: 'img/icon-512.png',
             vibrate: [100, 50, 100],
             data: { url: payload.url }
         })
